@@ -16,7 +16,7 @@ var listen_port = process.env.PORT;
 var vcap_services  = JSON.parse(process.env.VCAP_SERVICES);
 
 var target_hostname = vcap_services["orientdb"][0].credentials["hostname"];
-var target_port = vcap_services["user-provided"][0].credentials["ports"]["2480/tcp"];
+var target_port = vcap_services["orientdb"][0].credentials["ports"]["2480/tcp"];
 
 console.log("Setting up proxy to " , target_hostname, ":" , target_port);
 
