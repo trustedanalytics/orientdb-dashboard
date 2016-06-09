@@ -6,4 +6,4 @@ applications:
   disk_quota: 256M
   path: .
   services:
-  - orientdb
+    - orientdb
