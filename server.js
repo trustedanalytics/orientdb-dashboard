@@ -40,5 +40,5 @@ server.on('upgrade', function (req, socket, head) {
   proxy.ws(req, socket, head);
 });
 
-console.log("Listening on port " + listen_port)
+console.log("Listening on port " + listen_port);
 server.listen(listen_port);
