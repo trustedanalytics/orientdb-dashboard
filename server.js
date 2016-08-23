@@ -30,14 +30,10 @@ var http = require('http'),
 var proxy = httpProxy.createProxyServer({   target: {
     host: target_hostname,
     port: target_port
-  },ws: true, web:true});
+  }, web:true});
 
 var server = http.createServer(function(req, res) {
   proxy.web(req, res);
-});
-
-server.on('upgrade', function (req, socket, head) {
-  proxy.ws(req, socket, head);
 });
 
 console.log("Listening on port " + listen_port);
